@@ -3,11 +3,7 @@ declare type PropsApi = {
   meanings: [
     {
       partOfSpeech: string
-      definitions: [
-        {
-          definition: string
-        }
-      ]
+      definitions: { definition: string }[]
       synonyms: string[]
     }
   ]
