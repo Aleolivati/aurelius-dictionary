@@ -37,7 +37,7 @@ export const SwitchCheck = styled.input`
     background: ${colors.switchButtonSecondary};
 
     &:before {
-      transform: translate(24px, -50%);
+      transform: translate(27px, -50%);
       background: ${colors.switchButtonPrimary};
     }
   }
