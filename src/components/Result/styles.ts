@@ -1,4 +1,6 @@
 import styled from 'styled-components'
+import { breakpoints, colors } from 'styles'
+import * as T from '../../themes'
 
 export const SearchContainer = styled.div`
   display: flex;
@@ -11,7 +13,7 @@ export const SearchContainer = styled.div`
 `
 
 export const TitleResult = styled.h2`
-  color: #000;
+  color: ${T.TextColor};
   font-size: 32px;
   font-weight: 700;
   margin-bottom: 46px;
@@ -23,7 +25,7 @@ export const ClassificationContainer = styled.div`
   margin-bottom: 30px;
 
   p {
-    color: #000;
+    color: ${T.TextColor};
     font-size: 16px;
     font-weight: 700;
     margin-right: 16px;
@@ -33,27 +35,27 @@ export const ClassificationContainer = styled.div`
   span {
     width: 100%;
     height: 1px;
-    background-color: #999;
+    background-color: ${colors.gray};
   }
 `
 
 export const SubtitleResult = styled.h3`
-  color: rgba(153, 153, 153, 0.6);
+  color: ${colors.lightGray};
   font-size: 16px;
   font-weight: 500;
 `
 
 export const MeaningContainer = styled.ul`
-  margin: 26px 0 22px 2px;
+  margin: 26px 0 40px 2px;
   list-style-position: inside;
 
   li {
     margin-bottom: 20px;
     font-size: 14px;
-    color: #a745ec;
+    color: ${colors.purple};
 
     span {
-      color: #000;
+      color: ${T.TextColor};
       font-size: 14px;
     }
   }
@@ -61,6 +63,7 @@ export const MeaningContainer = styled.ul`
 
 export const SynonymsContainer = styled.div`
   display: flex;
+  margin-bottom: 46px;
 `
 
 export const SynonymsList = styled.ul`
@@ -68,7 +71,11 @@ export const SynonymsList = styled.ul`
   margin-left: 20px;
   gap: 16px;
   list-style: none;
-  color: #a745ec;
+  color: ${colors.purple};
   font-size: 14px;
   font-weight: 500;
+
+  @media (max-width: ${breakpoints.mobile}) {
+    flex-wrap: wrap;
+  }
 `

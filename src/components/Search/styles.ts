@@ -1,4 +1,5 @@
 import styled from 'styled-components'
+import * as T from '../../themes'
 
 export const SearchContainer = styled.div`
   display: flex;
@@ -15,10 +16,10 @@ export const SearchInput = styled.input`
   max-width: 572px;
   font-size: 16px;
   font-weight: 600;
-  color: #000;
+  color: ${T.TextColor};
   padding: 20px;
   border-radius: 8px 0 0 8px;
-  background-color: #f4f4f4;
+  background-color: ${T.searchColor};
   border: none;
   outline: none;
 `
@@ -28,7 +29,7 @@ export const SearchButton = styled.button`
   height: 60px;
   max-width: 60px;
   border-radius: 0 8px 8px 0;
-  background-color: #f4f4f4;
+  background-color: ${T.searchColor};
   border: none;
   outline: none;
   cursor: pointer;

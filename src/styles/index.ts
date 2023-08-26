@@ -1,26 +1,38 @@
 import { createGlobalStyle } from 'styled-components'
-import { Inter } from 'next/font/google'
+import * as T from '../themes'
 
-export const inter = Inter({
-  subsets: ['latin'],
-  weight: ['400', '500', '600', '700']
-})
+export const colors = {
+  lightGray: `rgba(153, 153, 153, 0.60)`,
+  gray: '#999',
+  purple: '#A745EC',
+  switchButtonPrimary: '#747474',
+  switchButtonSecondary: '#fff'
+}
+
+export const breakpoints = {
+  mobile: '426px'
+}
 
 export const GlobalStyle = createGlobalStyle`
   * {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
-    font-family: var(inter);
   }
 
   .container {
     max-width: 690px;
     width: 100%;
+    height: 100%;
     margin: 0 auto;
+
+    @media (max-width: ${breakpoints.mobile}) {
+      width: 90%;
+    }
   }
 
   body, html {
-    background-color: #fff;
+    background-color: ${T.backgroundColor};
+    min-height: 100vh;
   }
 `

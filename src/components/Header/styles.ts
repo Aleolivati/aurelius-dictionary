@@ -4,7 +4,11 @@ export const HeaderContainer = styled.div`
   display: flex;
   align-items: center;
   justify-content: space-between;
-  margin-top: 40px;
+  padding-top: 40px;
+
+  .home {
+    cursor: pointer;
+  }
 `
 
 export const ThemeContainer = styled.div`
