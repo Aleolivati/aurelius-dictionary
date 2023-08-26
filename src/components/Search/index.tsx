@@ -1,7 +1,7 @@
 import { ChangeEvent } from 'react'
 
 import Image from 'next/image'
-import searchIcon from '../../../public/assets/images/SearchIcon.svg'
+import searchIcon from '../../../public/assets/images/icon-search.svg'
 
 import * as S from './styles'
 
